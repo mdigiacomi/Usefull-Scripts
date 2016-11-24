@@ -1,7 +1,11 @@
 #/bin/bash
 
 #Install OpenJDK
-sudo yum install java-1.8.0-openjdk
+if type -p java; then
+    echo "Java Installed"
+else
+    sudo yum -y install java-1.8.0-openjdk
+fi
 
 #Download Public Signing Key
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
@@ -10,7 +14,7 @@ rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 sudo cp ./elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 
 #Installing ElasticSearch
-sudo yum install elasticsearch
+sudo yum -y install elasticsearch
 
 #Update ElasticSearch Config
 sudo cp ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
