@@ -4,7 +4,7 @@
 sudo yum -y install git
 
 #Cloning Repo
-git clone http://github.otpp.com/EC-Common/Useful-Bash.git
+git clone https://github.com/mdigiacomi/Usefull-Scripts.git
 
 #Executing Installation
 cd ./Useful-Bash/ElasticSearch-Install/
