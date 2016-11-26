@@ -24,7 +24,7 @@ cp ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 chkconfig --add elasticsearch
 
 #Start Elasticsearch Service
--i service elasticsearch start
+service elasticsearch start
 
 #Set Firewall Port
 firewall-cmd --zone=public --add-port=9200/tcp --permanent
