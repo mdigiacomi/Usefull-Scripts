@@ -4,31 +4,31 @@
 if type -p java; then
     echo "Java Installed"
 else
-    yum -y install java-1.8.0-openjdk
+    sudo yum -y install java-1.8.0-openjdk
 fi
 
 #Download Public Signing Key
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
 
 #Adding RPM Repository
-cp ./elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
+sudo cp ./elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 
 #Installing ElasticSearch
-yum -y install elasticsearch
+sudo yum -y install elasticsearch
 
 #Update ElasticSearch Config
-cp ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+sudo cp ./elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
 
 #Configure ElasticSearch to start automatically
-/bin/systemctl daemon-reload
-/bin/systemctl enable elasticsearch.service
+sudo /bin/systemctl daemon-reload
+sudo /bin/systemctl enable elasticsearch.service
 
 #Start Elasticsearch Service
-systemctl start elasticsearch.service
+sudo systemctl start elasticsearch.service
 
 #Adding Firewall Rule
-firewall-cmd --zone=public --add-port=9200/tcp --permanent
-firewall-cmd --reload
+sudo firewall-cmd --zone=public --add-port=9200/tcp --permanent
+sudo firewall-cmd --reload
 
 #Checking Port is Open
-firewall-cmd --list-all
+sudo firewall-cmd --list-all
