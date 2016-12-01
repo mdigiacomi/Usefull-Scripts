@@ -9,7 +9,7 @@ sudo rm -Rf ./Usefull-Scripts/
 #Cloning Repo
 git clone https://github.com/mdigiacomi/Usefull-Scripts.git
 
-cd ./Usefull-Scripts/ElasticSearch-Install-RH
+cd ./Usefull-Scripts/Kibana-Install-RH
 
 #Checking it System uses init or systemd and running apropriate script
 if pidof /sbin/init; then 

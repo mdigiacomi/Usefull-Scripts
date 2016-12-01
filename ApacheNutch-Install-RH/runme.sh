@@ -3,10 +3,13 @@
 #Installing Git
 sudo yum -y install git unzip
 
-#Cloning Repo
-#git clone https://github.com/mdigiacomi/Usefull-Scripts.git
+#Removing repo if already exists
+sudo rm -Rf ./Usefull-Scripts/
 
-#cd ./Usefull-Scripts/ApacheNutch-Install-RH
+#Cloning Repo
+git clone https://github.com/mdigiacomi/Usefull-Scripts.git
+
+cd ./Usefull-Scripts/ApacheNutch-Install-RH
 
 if [ -n "$JAVAHOME" ]; then
     echo "$JAVAHOME";
