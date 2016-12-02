@@ -1,4 +1,4 @@
-#ELASTICSEARCH-INSTALL
+#KIBANA-INSTALL
 
 Want to run this on a server:
 
