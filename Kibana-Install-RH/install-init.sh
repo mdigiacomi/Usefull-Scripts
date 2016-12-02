@@ -17,6 +17,9 @@ sudo cp ./kibana.repo /etc/yum.repos.d/kibana.repo
 #Installing ElasticSearch
 sudo yum -y install kibana
 
+#Copy elasticsearch config
+sudo cp ./kibana.yml /etc/kibana/kibana.yml
+
 #Configure ElasticSearch to start automatically
 sudo chkconfig --add kibana
 
