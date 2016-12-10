@@ -1,5 +1,8 @@
 #ELASTICSEARCH-INSTALL
 
+### This Script was designed to run on CentOS 7 and Red Hat 7 but should work with Fedora.
+
+
 Want to run this on a server:
 
 Execute Script

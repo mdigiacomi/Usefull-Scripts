@@ -1,5 +1,7 @@
 #ELASTICSEARCH-INSTALL
 
+### This Script was designed to run on Ubuntu but should work with debian.
+
 Want to run this on a server:
 
 Execute Script
