@@ -4,7 +4,7 @@
 if type -p java; then
     echo "Java Installed"
 else
-    sudo apt-get -y install java-1.8.0-openjdk
+    sudo apt-get -y install default-jdk
 fi
 
 #Download Public Signing Key
