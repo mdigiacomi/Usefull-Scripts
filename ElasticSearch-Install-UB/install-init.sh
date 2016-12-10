@@ -27,9 +27,5 @@ sudo chkconfig --add elasticsearch
 #Start Elasticsearch Service
 sudo -i service elasticsearch start
 
-#Set Firewall Port
-sudo firewall-cmd --zone=public --add-port=9200/tcp --permanent
-sudo firewall-cmd --reload
-
-#Verify Port Open
-sudo firewall-cmd --list-all
+#Adding Firewall Rule
+sudo ufw allow 9200

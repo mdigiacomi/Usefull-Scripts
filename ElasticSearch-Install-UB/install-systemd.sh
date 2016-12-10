@@ -29,8 +29,4 @@ sudo /bin/systemctl enable elasticsearch.service
 sudo systemctl start elasticsearch.service
 
 #Adding Firewall Rule
-sudo firewall-cmd --zone=public --add-port=9200/tcp --permanent
-sudo firewall-cmd --reload
-
-#Checking Port is Open
-sudo firewall-cmd --list-all
+sudo ufw allow 9200
