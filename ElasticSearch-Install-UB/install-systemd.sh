@@ -11,9 +11,11 @@ fi
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
 #Adding RPM Repository
-sudo cp ./elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
+sudo apt-get install apt-transport-https
+sudo echo "deb https://artifacts.elastic.co/packages/5.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-5.x.list
 
 #Installing ElasticSearch
+sudo apt-get update
 sudo apt-get install elasticsearch
 
 #Update ElasticSearch Config
